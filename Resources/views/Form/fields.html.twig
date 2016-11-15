@@ -1,0 +1,53 @@
+{% extends 'MopaBootstrapBundle:Form:fields.html.twig' %}
+{% block dentiman_date_picker_widget %}
+    {% spaceless %}
+        {{ block('form_widget_simple') }}
+
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                 $('#{{ id }}').datepicker({{ pickerOptions|json_encode|raw }});
+            });
+        </script>
+    {% endspaceless %}
+{% endblock %}
+
+{% block dentiman_date_range_picker_widget %}
+    {% spaceless %}
+        {{ block('form_widget_simple') }}
+
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('#{{ id }}').daterangepicker({{ pickerOptions|json_encode|raw }});
+            });
+        </script>
+    {% endspaceless %}
+{% endblock %}
+
+
+{% block dentiman_color_picker_widget %}
+    {% spaceless %}
+        <div id="color_{{ id }}" class="input-group colorpicker-component">
+            {{ block('form_widget_simple') }}
+            <span class="input-group-addon"><i></i></span>
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('#color_{{ id }}').colorpicker({{ pickerOptions|json_encode|raw }});
+            });
+        </script>
+    {% endspaceless %}
+{% endblock %}
+
+
+{% block dentiman_multi_choice_widget %}
+    {% spaceless %}
+        <div class="btn-group dropdown">
+            {{ block('choice_widget') }}
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('#{{ id }}').multiselect({{ multiselectOptions|json_encode|raw }});
+            });
+        </script>
+    {% endspaceless %}
+{% endblock %}

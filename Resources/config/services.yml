@@ -1,0 +1,4 @@
+services:
+#    dentiman_bootstrap.example:
+#        class: Dentiman\BootstrapBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

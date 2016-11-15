@@ -1,0 +1,40 @@
+{
+    "name": "dentiman/bootstrap-bundle",
+    "type": "symfony-bundle",
+    "description": "Integration of twitters bootstrap into symfony2 project",
+    "keywords": ["form", "bootstrap", "bootstrap form", "template"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Denis Timanovskiy",
+            "email": "den.timanovskiy@gmail.com",
+            "homepage": "https://github.com/dentiman/BootstrapBundle"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dentiman\\BootstrapBundle\\": ""
+        }
+    },
+    "require": {
+        "symfony/framework-bundle": ">=2.1",
+        "symfony/twig-bundle": "~2.3|~3.0",
+        "symfony/form": ">=2.1",
+        "mopa/bootstrap-bundle":">=2.0"
+
+    },
+    "suggest":  {
+        "twbs/bootstrap": ">2.0,<4.0-dev",
+        "knplabs/knp-paginator-bundle": "~2.3",
+        "knplabs/knp-menu-bundle": "~2.0@dev",
+        "mopa/bootstrap-sandbox-bundle": "~2.3",
+        "craue/formflow-bundle": "~2.0",
+        "twbs/bootstrap-sass": "v3.1.1"
+    },
+    "extra": {
+        "symfony-assets-install":"symlink",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
