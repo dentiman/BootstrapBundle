@@ -51,3 +51,21 @@
         </script>
     {% endspaceless %}
 {% endblock %}
+
+{%- block form_legend -%}
+{% endblock %}
+
+
+{%- block form_widget_compound -%}
+    {{ parent() }}
+    {%- if form.parent is empty -%}
+        {% if action != '' %}
+            <script>
+                jQuery(document).ready(function($) {
+                    console.log('{{ action }}');
+                });
+            </script>
+        {% endif %}
+
+    {%- endif -%}
+{%- endblock form_widget_compound -%}
